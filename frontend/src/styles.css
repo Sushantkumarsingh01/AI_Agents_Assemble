@@ -1,0 +1,21 @@
+/* ===================
+   Global Styles
+   =================== */
+:root {
+	--bg:#0f1115;
+	--panel:#151821;
+	--text:#e5e7eb;
+	--muted:#9aa0aa;
+	--accent:#10b981;
+	--user:#2563eb;
+}
+
+/* Global */
+* { box-sizing: border-box; }
+html, body, #root { height: 100%; }
+body {
+	margin: 0;
+	background: var(--bg);
+	color: var(--text);
+	font: 14px/1.4 system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
+}

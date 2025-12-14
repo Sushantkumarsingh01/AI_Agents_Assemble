@@ -1,0 +1,146 @@
+/* ===================
+   Auth Page Styling
+   =================== */
+* {
+	scroll-behavior: smooth;
+}
+
+.auth-grid {
+	height: 100%;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+}
+
+/* Left side */
+.auth-left {
+	position: relative;
+	overflow: hidden;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 24px;
+}
+
+.auth-left::before {
+	content: "";
+	position: absolute;
+	inset: 0;
+	background: linear-gradient(180deg, rgba(15,17,21,0.3), rgba(15,17,21,0.5));
+}
+
+.auth-left img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	filter: brightness(0.9) contrast(0.9);
+}
+
+
+/* Glassy Login Card */
+.auth-card {
+	width: 80%;
+	max-width: 380px;
+	padding: 28px;
+	border-radius: 16px;
+	background: rgba(38,50,86,0.25);
+	border: 1px solid rgba(255,255,255,0.1);
+	backdrop-filter: blur(16px);
+	box-shadow: 0 8px 32px rgba(0,0,0,0.6);
+	transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+.auth-card:hover {
+	box-shadow: 0 0 20px rgba(10,177,255,0.4);
+	transform: translateY(-4px);
+}
+
+.auth-title {
+	font-size: 1.5rem;
+	font-weight: 700;
+	color: #e5e7eb !important;
+	margin-bottom: 20px !important;
+	text-align: center;
+}
+
+/* Inputs */
+.auth-card input {
+	width: 100%;
+	padding: 12px;
+	margin-bottom: 14px;
+	border-radius: 10px;
+	border: 1px solid #2a3042;
+	background: rgba(15,17,21,0.8);
+	color: #e5e7eb;
+	outline: none;
+	transition: border 0.3s ease, box-shadow 0.3s ease;
+}
+.auth-card input:focus {
+	border: 1px solid #0ab1ff;
+	box-shadow: 0 0 8px rgba(10,177,255,0.6);
+}
+
+/* Button */
+.auth-card button[type="submit"] {
+	width: 100%;
+	padding: 12px;
+	border: none;
+	border-radius: 10px;
+	background: linear-gradient(135deg, #0ab1ff, #2563eb);
+	color: white;
+	font-weight: 600;
+	font-size: 1rem;
+	cursor: pointer;
+	transition: box-shadow 0.3s ease, transform 0.2s ease;
+}
+.auth-card button[type="submit"]:hover {
+	box-shadow: 0 0 15px rgba(10,177,255,0.6);
+	transform: translateY(-2px);
+}
+
+/* Muted text + Links */
+.auth-muted {
+	font-size: 0.85rem;
+	color: #9aa0aa;
+	text-align: center;
+}
+.auth-link {
+	background: transparent;
+	border: 0;
+	color: #93c5fd;
+	cursor: pointer;
+	transition: color 0.3s ease;
+}
+.auth-link:hover { color: #0ab1ff; }
+.auth-link:focus { outline: none; }
+
+/* Right side with image */
+.auth-right {
+	position: relative;
+	overflow: hidden;
+}
+
+.auth-image {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	filter: brightness(0.9) contrast(0.9); /* ↑ Brighter image */
+}
+
+.auth-right::after {
+	content: "";
+	position: absolute;
+	inset: 0;
+	background:
+		radial-gradient(circle at center, rgba(10,177,255,0.1), transparent 100%),
+		linear-gradient(180deg, rgba(15,17,21,0.3), rgba(15,17,21,0.5)); /* ↑ Lighter overlay */
+	pointer-events: none;
+}
+
+:where(.css-dev-only-do-not-override-1fumvat).ant-form-item .ant-form-item-label >label {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    max-width: 100%;
+    height: 32px;
+    color: rgba(236, 230, 230, 0.88);
+    font-size: 14px;
+}
